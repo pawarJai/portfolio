@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaBlogger, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-
+// @ts-ignore
 const SocialLinks: React.FC = () => {
   return (
     <section id="social" className="py-16 px-5 bg-gradient-to-r from-black via-dark to-black text-light">

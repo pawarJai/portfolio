@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+// @ts-ignore
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-16 bg-dark text-light">

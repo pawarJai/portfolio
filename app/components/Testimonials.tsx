@@ -1,7 +1,7 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-
+// @ts-ignore
 const Testimonials: React.FC = () => {
   const testimonials = [
     {

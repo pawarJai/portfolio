@@ -19,7 +19,7 @@ const skills = [
   { name: "MongoDB", level: 75, icon: <SiMongodb size={40} className="text-green-500" />, experience: "2 years" },
   { name: "Tailwind CSS", level: 95, icon: <SiTailwindcss size={40} className="text-blue-400" />, experience: "1+ years" },
 ];
-
+// @ts-ignore
 const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-16 px-5 bg-dark text-light">

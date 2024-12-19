@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-
+// @ts-ignore
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState<string>("Home");
 

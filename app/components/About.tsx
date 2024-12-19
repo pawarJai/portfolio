@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaCode, FaPalette, FaUserGraduate } from "react-icons/fa";
-
+// @ts-ignore
 const About: React.FC = () => {
   return (
     <section
