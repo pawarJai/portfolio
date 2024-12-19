@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 };
-// chnage
+// chnagedfdf
 export default nextConfig;
 
 
