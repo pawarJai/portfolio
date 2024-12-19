@@ -1,3 +1,6 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +20,32 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif; /* Apply Roboto as the default font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins to headings */
+}
+
+a {
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+a:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+a.active {
+  border-bottom: 2px solid #007bff !important; /* Custom active state border */
+  color: #007bff !important; /* Custom active state text color */
+}
+
+a:hover {
+  color: #007bff !important;
 }
