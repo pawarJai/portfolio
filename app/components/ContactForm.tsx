@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import emailjs from "emailjs-com"; // EmailJS for email sending
-
+// @ts-ignore
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",

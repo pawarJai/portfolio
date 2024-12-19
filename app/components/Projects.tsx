@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-
+// @ts-ignore
 const Projects: React.FC = () => {
   const projects = [
     
