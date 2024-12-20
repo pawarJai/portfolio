@@ -2,7 +2,7 @@
 import Head from "next/head";
 import About from "./components/About";
 import ContactForm from "./components/ContactForm";
-import Experience from "./components/Experience";
+// import Experience from "./components/Experience";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
