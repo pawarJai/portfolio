@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-// @ts-expect-error: Ignore type-checking error for demonstration
+
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState<string>("Home");
 
