@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaBlogger } from "react-icons/fa";
-// @ts-expect-error: Ignore type-checking error for demonstration
+
 const Footer: React.FC = () => {
   return (
     <footer className="bg-dark text-light py-8 px-5">

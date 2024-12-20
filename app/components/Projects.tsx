@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-// @ts-expect-error: Ignore type-checking error for demonstration
+
 const Projects: React.FC = () => {
   const projects = [
     
