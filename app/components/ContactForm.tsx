@@ -18,32 +18,32 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setStatus("Sending...");
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+  //   setStatus("Sending...");
 
-    try {
-      await emailjs.sendForm(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-        e.target, // The form itself
-        "YOUR_USER_ID" // Replace with your EmailJS user ID
-      );
-      setStatus("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setStatus("Error sending message. Please try again later.");
-    }
-    setIsSubmitting(false);
-  };
+  //   try {
+  //     await emailjs.sendForm(
+  //       "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
+  //       "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
+  //       e.target, // The form itself
+  //       "YOUR_USER_ID" // Replace with your EmailJS user ID
+  //     );
+  //     setStatus("Message sent successfully!");
+  //     setFormData({ name: "", email: "", message: "" });
+  //   } catch (error) {
+  //     setStatus("Error sending message. Please try again later.");
+  //   }
+  //   setIsSubmitting(false);
+  // };
 
   return (
     <section className="py-16 px-5 bg-black text-white" id="contact">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12 text-blue-500 animate__animated animate__fadeIn animate__delay-1s">Contact Me</h2>
         <form
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
           className="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6 animate__animated animate__fadeIn animate__delay-2s"
         >
           {/* Name Input */}
