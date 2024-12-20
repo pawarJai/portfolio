@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
         className="rounded-full overflow-hidden w-36 h-36 md:w-48 md:h-48 mb-4 shadow-xl"
       >
         <Image
-          src="/1620834450072.jpg" // Add your image here
+          src="./1620834450072.jpg" // Add your image here
           alt="Profile Picture"
           width={200}
           height={200}
