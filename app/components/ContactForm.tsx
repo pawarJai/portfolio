@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
         >
           {/* Name Input */}
           <div className="space-y-2">
-            <label htmlFor="name" className="text-lg">Your Name</label>
+            <label htmlFor="name" className="text-lg">{`Your Name`}</label>
             <input
               type="text"
               name="name"
