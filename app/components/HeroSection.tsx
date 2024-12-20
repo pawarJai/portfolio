@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// @ts-ignore
+// @ts-expect-error: Ignore type-checking error for demonstration
 const HeroSection: React.FC = () => {
   return (
     <section className="h-screen bg-gradient-to-br from-dark to-black text-light flex flex-col justify-center items-center text-center">
