@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import SocialLinks from "./components/SocialLinks";
-// @ts-ignore
+// @ts-expect-error: Ignore type-checking error for demonstration
 export default function Home() {
   return (
     <>
