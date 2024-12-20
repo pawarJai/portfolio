@@ -1,7 +1,7 @@
 import { FaPython, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiDjango, SiFlask } from "react-icons/si";
 import Image from "next/image"; 
-// @ts-ignore
+// @ts-expect-error: Ignore type-checking error for demonstration
 const Experience = () => {
   const skillsExperience = [
     { skill: "Python", years: 4.6, icon: <FaPython className="text-4xl text-yellow-500" /> },
