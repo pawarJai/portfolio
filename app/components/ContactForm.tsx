@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import emailjs from "emailjs-com"; // EmailJS for email sending
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,37 +17,47 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  // const handleSubmit = async (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-  //   setStatus("Sending...");
-
-  //   try {
-  //     await emailjs.sendForm(
-  //       "YOUR_SERVICE_ID", // Replace with your EmailJS service ID
-  //       "YOUR_TEMPLATE_ID", // Replace with your EmailJS template ID
-  //       e.target, // The form itself
-  //       "YOUR_USER_ID" // Replace with your EmailJS user ID
-  //     );
-  //     setStatus("Message sent successfully!");
-  //     setFormData({ name: "", email: "", message: "" });
-  //   } catch (error) {
-  //     setStatus("Error sending message. Please try again later.");
-  //   }
-  //   setIsSubmitting(false);
-  // };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setStatus("Sending...");
+  
+    try {
+      const response = await fetch("/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Error sending message. Please try again later.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Error sending message. Please try again later.");
+    }
+  
+    setIsSubmitting(false);
+  };
 
   return (
     <section className="py-16 px-5 bg-black text-white" id="contact">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12 text-blue-500 animate__animated animate__fadeIn animate__delay-1s">Contact Me</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-blue-500 animate_animated animatefadeIn animate_delay-1s">
+          Contact Me
+        </h2>
         <form
-          // onSubmit={handleSubmit}
-          className="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6 animate__animated animate__fadeIn animate__delay-2s"
+          onSubmit={handleSubmit}
+          className="bg-gray-800 p-8 rounded-lg shadow-lg space-y-6 animate_animated animatefadeIn animate_delay-2s"
         >
           {/* Name Input */}
           <div className="space-y-2">
-            <label htmlFor="name" className="text-lg">{`Your Name`}</label>
+            <label htmlFor="name" className="text-lg">Your Name</label>
             <input
               type="text"
               name="name"
