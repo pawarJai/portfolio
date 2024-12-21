@@ -6,6 +6,7 @@ import clsx from "clsx";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState<string>("Home");
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // Manage mobile menu state
 
   const navItems = [
     { name: "Home", href: "#contactform" },
@@ -16,6 +17,7 @@ const Navbar = () => {
 
   const handleItemClick = (itemName: string) => {
     setActiveItem(itemName);
+    setIsMenuOpen(false); // Close menu after selecting an item
   };
 
   return (
@@ -26,13 +28,13 @@ const Navbar = () => {
           <Link href="/">
             <h1 className="text-2xl font-bold text-primary font-display">
               Jayesh's Portfolio
-            </h1>{" "}
-            {/* Applying Poppins font to the logo */}
+            </h1>
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden text-white focus:outline-none focus:ring-2 focus:ring-primary"
           aria-label="Toggle Menu"
         >
@@ -52,6 +54,39 @@ const Navbar = () => {
           </svg>
         </button>
 
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <ul className="absolute top-16 left-0 w-full bg-dark shadow-md flex flex-col items-center space-y-4 py-6 lg:hidden">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  onClick={() => handleItemClick(item.name)}
+                  className={clsx(
+                    "text-lg font-medium transition-all duration-300 px-3 py-2 font-sans",
+                    activeItem === item.name
+                      ? "border border-primary rounded-md shadow-md"
+                      : "",
+                    "hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+
+            {/* Hire Me Button */}
+            <li>
+              <Link
+                href="#contact"
+                className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold shadow-lg hover:bg-blue-600 hover:shadow-xl transition-all duration-300"
+              >
+                Hire Me
+              </Link>
+            </li>
+          </ul>
+        )}
+
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-8 items-center">
           {navItems.map((item) => (
@@ -60,7 +95,7 @@ const Navbar = () => {
                 href={item.href}
                 onClick={() => handleItemClick(item.name)}
                 className={clsx(
-                  "text-lg font-medium transition-all duration-300 px-3 py-2 font-sans", // Applying Roboto font to the nav items
+                  "text-lg font-medium transition-all duration-300 px-3 py-2 font-sans",
                   activeItem === item.name
                     ? "border border-primary rounded-md shadow-md"
                     : "",
@@ -81,17 +116,6 @@ const Navbar = () => {
               Hire Me
             </Link>
           </li>
-
-          {/* Download CV Button */}
-          {/* <li>
-            <a
-              href="/pawar_jayesh.pdf" // Replace with your actual CV file path
-              download
-              className="px-4 py-2 rounded-lg bg-green-500 text-white text-sm font-semibold shadow-lg hover:bg-green-600 hover:shadow-xl transition-all duration-300"
-            >
-              Download CV
-            </a>
-          </li> */}
         </ul>
       </nav>
     </header>
