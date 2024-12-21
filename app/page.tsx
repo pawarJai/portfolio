@@ -40,7 +40,7 @@ export default function Home() {
       <Projects />
       <ContactForm />
       <SocialLinks /> 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

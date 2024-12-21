@@ -2,13 +2,13 @@ import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaBlogger, FaPhoneAlt, Fa
 
 const SocialLinks: React.FC = () => {
   return (
-    <section id="social" className="py-16 px-5 bg-gradient-to-r from-black via-dark to-black text-light">
+    <section id="social" className="py-16 px-4 bg-gradient-to-r from-black via-dark to-black text-light">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold text-primary mb-6">Follow Me</h2>
         <p className="text-lg mb-8">
           Connect with me on my professional and personal platforms. Let’s stay in touch!
         </p>
-        <div className="flex justify-center space-x-6 text-3xl">
+        <div className="flex flex-wrap justify-center gap-6 text-3xl">
           {/* GitHub */}
           <a
             href="https://github.com/pawarJai"
