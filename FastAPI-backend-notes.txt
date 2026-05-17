@@ -1,0 +1,86 @@
+FastAPI Backend Notes
+
+Purpose
+- Provide resume download via GET /resume
+- Accept project inquiry submissions via POST /inquiry
+
+Stack
+- FastAPI + Uvicorn
+- Pydantic for validation
+- Optional: slowapi (rate limiting), python-multipart (file uploads), fastapi-mail or SMTP, SQLAlchemy for DB
+- CORS restricted to your Next.js domain
+
+Endpoints
+- GET /resume
+  - Returns PDF file (Content-Type: application/pdf)
+  - Query: download=true|false (true forces attachment download; false/omitted shows inline)
+  - Use FileResponse(path, filename="Jayesh_Resume.pdf")
+  - Cache headers: Cache-Control and ETag recommended
+- POST /inquiry
+  - JSON body with fields:
+    - name: str
+    - email: EmailStr
+    - company: str | None
+    - budget: str | None
+    - timeline: str | None
+    - message: str (20–4000 chars)
+  - Optional file attachment via multipart/form-data (size limits)
+  - Actions: validate, store/log, send email notification, return 201 with id
+- GET /health
+  - Returns simple status for monitoring
+
+Models (Pydantic)
+- InquiryCreate(name, email, company?, budget?, timeline?, message)
+- InquiryResponse(id: str, received_at: datetime, status: "received")
+
+Resume Storage
+- Place resume at ./storage/resume.pdf
+- Configure via ENV: RESUME_PATH
+- Validate existence on startup; 404 if missing
+
+Email Notifications
+- ENV: SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, MAIL_FROM, MAIL_TO
+- Subject: New Project Inquiry from {name}
+- Body includes sanitized fields; escape newlines
+- Consider hosted email API (Resend/SendGrid/Postmark) if SMTP is unreliable
+
+Security
+- CORS: allow only https://your-frontend-domain
+- Rate limit: e.g., 10 req/min per IP on /inquiry
+- Captcha: optional reCAPTCHA/hCaptcha server-side verify
+- Request size limits and attachment caps (e.g., 5MB)
+- Structured JSON logging with request id
+
+Integration (Next.js)
+- Same-origin proxy preferred: proxy /api/* to FastAPI
+- Cross-origin: enable CORS; call https://api.yourdomain/inquiry
+- Frontend wiring:
+  - Resume button: link to /resume?download=true
+  - Contact form: POST JSON to /inquiry; show success toast
+
+Project Layout (suggested)
+- backend/
+  - app/main.py
+  - app/models.py
+  - app/email.py
+  - app/config.py
+  - storage/resume.pdf
+- .env (mail creds, RESUME_PATH)
+
+Setup Commands
+- python -m venv .venv
+- .venv\Scripts\activate
+- pip install fastapi uvicorn pydantic slowapi python-multipart aiofiles
+- uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+Sample cURL
+- Resume inline: curl -i "http://localhost:8000/resume"
+- Resume download: curl -OJ "http://localhost:8000/resume?download=true"
+- Inquiry JSON:
+  - curl -X POST http://localhost:8000/inquiry -H "Content-Type: application/json" -d "{\"name\":\"Jayesh\",\"email\":\"jay@example.com\",\"message\":\"Tell me about AI project.\"}"
+
+Testing
+- Verify /resume returns 200 with application/pdf
+- Validate bad email and short message return 422
+- Rate limit returns 429 when exceeded
+- /health returns 200

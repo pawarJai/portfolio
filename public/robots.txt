@@ -1,0 +1,27 @@
+# Robots.txt for Skyline Ways - Freelance AI/ML Developer
+# https://skylineways.site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://skylineways.site/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /.*
+
+# Allow important pages for SEO
+Allow: /
+Allow: /#about
+Allow: /#aiml
+Allow: /#projects
+Allow: /#contact
+Allow: /#experience
+Allow: /#skills
+
+# Crawl delay (optional)
+Crawl-delay: 1
