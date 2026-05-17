@@ -38,7 +38,7 @@ export default function HomePage() {
               className='absolute left-0 top-4 z-30 max-w-[260px] lg:top-0'
             >
               <p className='break-all text-[10px] font-semibold uppercase tracking-[0.3em] text-black/70 sm:text-[11px]'>
-                pawarjay1516@gmail.com
+                contact@aakshiv.com
               </p>
             </motion.div>
 
