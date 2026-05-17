@@ -143,7 +143,7 @@ export default function Footer() {
                   href='mailto:contact@skylineways.site'
                   className='hover:text-white'
                 >
-                  contact@skylineways.site
+                  contact@aakshiv.com
                 </a>
               </div>
             </div>
