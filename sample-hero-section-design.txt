@@ -1,0 +1,686 @@
+.page
+  %header
+    .swoosh.position-fixed
+    .sticky-nav.difference.d-flex.justify-content-between
+      .logo
+      #nav-btn.menu.box
+        <svg id="i1" class="icon" viewBox="20 30 60 40">
+        <path id="top-line-1"     d="M30,37 L70,37 Z"></path>
+        <path id="middle-line-1" 	d="M30,50 L70,50 Z"></path>
+        <path id="bottom-line-1" 	d="M30,63 L70,63 Z"></path>
+        </svg>
+    #takeover-nav
+      .container-fluid
+        .row
+          .nav-col.nav-contact.col-12.col-md-7.bg-black.d-flex.align-items-center.justify-content-center.position-relative.py-5.px-3.order-1.order-md-0
+            .position-absolute.w-100.h-100.bg-topographic
+            .content.position-relative
+              %h2.nav-title.white.mb-5
+                build your digital success with us<span class="d-inline green">&period;</span>
+              %ul.contact-items.white.list-unstyled.mb-5
+                %li.pb-4
+                  %a.text-decoration-none{:href => "#"} +1 386-235-4062
+                %li.pb-4
+                  %a.text-decoration-none{:href => "#"} morgan@tactusmarketing.com
+                %li
+                  %a.text-decoration-none{:href => "#"} Aguadilla, PR 00603
+              .social
+                %a.text-decoration-none.green{:href => "#"} linkedin
+                %span.mx-2.white
+                  |
+                %a.text-decoration-none.green{:href => "#"} facebook
+                %span.mx-2.white
+                  |
+                %a.text-decoration-none.green{:href => "#"} instagram
+          .nav-col.nav-menu.col-12.col-md-5.bg-green.d-flex.align-items-center.pt-5.pb-3.pb-md-5.px-3.px-md-5.order-0.order-md-1
+            %ul.nav-items.list-unstyled
+              %li.pb-3
+                %a.text-decoration-none{:href => "#"} services
+              %li.pb-3
+                %a.text-decoration-none{:href => "#"} portfolio
+              %li.pb-3
+                %a.text-decoration-none{:href => "#"} contact
+              %li
+                %a.text-decoration-none{:href => "#"} about
+  %section.hero.d-flex.align-items-center.justify-content-center
+    .video-wrap
+      <video autoplay="" playsinline="" loop="" muted="" id="video-bg">
+      <source src="https://assets.codepen.io/319606/tactus-waves-hero-sm.mp4" type="video/mp4">
+      </video>
+    .position-absolute.w-100.gradient-overlay
+    .content.position-relative.text-center.mb-5
+      %h1.hero-title.blend
+        Where Creativity 
+        %br
+        &amp; Strategy Meet
+  %section.two
+  %section.three
+  %section.four
+  %section.five
+.custom-cursor
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+$black: #212121;
+$white: #efefef;
+$pearl: #fff;
+$purple: #e8d1f6;
+$blue: #29639c;
+$green: #00BCD4;
+$pink: #b73b3b;
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+html,
+body {
+  background: $white;
+  color: $black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  height: 100%;
+}
+::selection {
+  background: $white;
+  color: $black;
+  mix-blend-mode: difference;
+}
+::-moz-selection {
+  background: $white;
+  color: $black;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: 900;
+}
+h1 {
+  font-size: 3em;
+}
+.hero-title {
+  font-size: 8vw;
+  line-height: 1em;
+  font-weight: 900;
+}
+.nav-title {
+  font-size: 4em;
+}
+a {
+  transition: all .25s ease-in-out;
+}
+.white, a.white {
+  color: $white;
+}
+.black {
+  color: $black;
+}
+.pearl, a.pearl {
+  color: $pearl;
+}
+.green, a.green {
+  color: $green;
+}
+.pink {
+  color: $pink;
+}
+.blend {
+  mix-blend-mode: difference !important;
+  color: $white;
+  position: relative;
+  z-index: 2;
+}
+.bg-black {
+  background-color: $black;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-topographic {
+  background-image: url(https://assets.codepen.io/319606/bg-topographic.svg);
+  background-size: 5000px;
+  opacity: .1;
+  pointer-events: none;
+}
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $green;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(.3);
+  z-index: 1000;
+}
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+.swoosh {
+  background-image: url('https://assets.codepen.io/319606/2023-logo-swoosh.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  top: 20px;
+  left: 18px;
+  width: 230px;
+  height: 45px;
+  z-index: 1000;
+  background-position: left;
+}
+.sticky-nav {
+  top: 20px;
+  left: 20px;
+  position: fixed;
+  width: calc(100% - 40px);
+  z-index: 999;
+  
+  &.difference {
+    background-repeat: no-repeat;
+    background-size: contain;
+    mix-blend-mode: difference;
+    // filter: invert(1);
+    
+    #nav-btn {
+      filter: invert(0);
+    }
+  }
+  
+  .logo {
+    width: 220px;
+    height: 45px;
+    background-image: url(https://assets.codepen.io/319606/2023-logo-white.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left;
+    z-index: 998;
+  }
+  
+  #nav-btn {
+    width: 60px;
+    z-index: 999;
+    filter: invert(1);
+    
+    .icon {
+      position: relative;
+      width: 100%; 
+      height: 100%;
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      // cursor: pointer;
+      stroke: #fff;
+    }
+  }
+  
+}
+
+
+#takeover-nav {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  left: 0;
+  top: -200%;
+  transition: all .5s ease-in-out;
+  z-index: 996;
+  
+  &.shown {
+    top: 0;
+  }
+  
+  .nav-col {
+    min-height: 100vh;
+    
+    a {
+      color: $white;
+      
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+  
+  .nav-contact {
+    
+    .content {
+      max-width: 700px;
+    }
+  }
+  
+  .nav-items {
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  
+  .contact-items {
+    font-size: 1.25em;
+    font-weight: 700;
+    
+    a:hover {
+      color: $green;
+    }
+  }
+  
+  .social {
+    font-size: .75em;
+    
+    a {
+      color: $green;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.gradient-overlay {
+  bottom: 0;
+  height: 50%;
+  background: -moz-linear-gradient(top,  rgba(33,33,33,0) 0%, rgba(33,33,33,1) 50%);
+  background: -webkit-linear-gradient(top,  rgba(33,33,33,0) 0%,rgba(33,33,33,1) 50%);
+  background: linear-gradient(to bottom,  rgba(33,33,33,0) 0%,rgba(33,33,33,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00212121', endColorstr='#212121',GradientType=0 );
+  z-index: 1;
+  border-bottom-right-radius: 15vw;
+  pointer-events: none;
+}
+.video-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-bottom-right-radius: 15vw;
+  pointer-events: none;
+}
+#video-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  transform: rotate(180deg);
+}
+
+section {
+  min-height: 800px;
+  height: 800px;
+  width: 100%;
+  
+  &.hero {
+    background-color: $black;
+    border-bottom-right-radius: 15vw;
+    position: relative;
+    
+    &:before {
+      content: "";
+      background-color: $black;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 15vw;
+      height: 15vw;
+    }
+    
+    &:after {
+      content: "";
+      background-color: $white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 15vw;
+      height: 15vw;
+      border-top-left-radius: 15vw;
+    }
+  }
+  
+  &.two {
+    background-color: $white;
+  }
+  
+  &.three {
+    background-color: $purple;
+  }
+  
+  &.four {
+    background-color: $green;
+  }
+  &.five {
+    background-color: $blue;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 75vh;
+  
+    #video-bg {
+      object-position: 0 5vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero {
+    
+    #video-bg {
+      object-position: 0 15vw;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #takeover-nav {
+    .nav-menu {
+      min-height: 500px;
+      
+      a {
+        color: $black;
+        
+        &:hover {
+          color: $white
+        }
+      }
+    }
+    .nav-contact {
+      min-height: 600px;
+      
+      .nav-title {
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header {
+    .swoosh {
+      width: 165px;
+      height: 35px;
+      top: 10px;
+    }
+    .sticky-nav {
+      top: 10px;
+      
+      .logo {
+        width: 150px;
+        height: 35px;
+      }
+      
+      #nav-btn {
+        width: 40px;
+      }
+    }
+    #takeover-nav {
+      .contact-items {
+        font-size: 1em;
+      }
+    }
+  }
+  .hero {
+    min-height: 600px;
+    height: 600px;
+    
+    .hero-title {
+      font-size: 12vw;
+    }
+    
+    #video-bg {
+      object-position: 0 30vw;
+    }
+  }
+}
+
+$( "#nav-btn" ).on( "click", function() {
+  $('#takeover-nav').toggleClass("shown");
+  $('.sticky-nav').toggleClass("difference");
+});
+
+
+
+///Initiation Variables
+var icon_1 = document.getElementById("nav-btn");
+var topLine_1 = document.getElementById("top-line-1");
+var middleLine_1 = document.getElementById("middle-line-1");
+var bottomLine_1 = document.getElementById("bottom-line-1");
+var state_1 = "menu";  // can be "menu" or "arrow"
+var topLineY_1;
+var middleLineY_1;
+var bottomLineY_1;
+var topLeftY_1;
+var topRightY_1;
+var bottomLeftY_1;
+var bottomRightY_1;
+var topLeftX_1;
+var topRightX_1;
+var bottomLeftX_1;
+var bottomRightX_1;
+
+///Animation Variables
+var segmentDuration_1 = 15;
+var menuDisappearDurationInFrames_1 = segmentDuration_1;
+var arrowAppearDurationInFrames_1 = segmentDuration_1;
+var arrowDisappearDurationInFrames_1 = segmentDuration_1;
+var menuAppearDurationInFrames_1 = segmentDuration_1;
+var menuDisappearComplete_1 = false;
+var arrowAppearComplete_1 = false;
+var arrowDisappearComplete_1 = false;
+var menuAppearComplete_1 = false;
+var currentFrame_1 = 1;
+
+///Menu Disappear 
+function menuDisappearAnimation_1() {
+	currentFrame_1++;
+	if ( currentFrame_1 <= menuDisappearDurationInFrames_1 ) {
+		window.requestAnimationFrame( ()=> { 
+			//top line
+			topLineY_1 = AJS.easeInBack( 37, 50, menuDisappearDurationInFrames_1, currentFrame_1 );
+			topLine_1.setAttribute( "d", "M30,"+topLineY_1+" L70,"+topLineY_1 );
+			//bottom line
+			bottomLineY_1 = AJS.easeInBack( 63, 50, menuDisappearDurationInFrames_1, currentFrame_1 );
+			bottomLine_1.setAttribute( "d", "M30,"+bottomLineY_1+" L70,"+bottomLineY_1 );
+			//recursion
+			menuDisappearAnimation_1();
+		});
+	} else {
+		middleLine_1.style.opacity = "0";
+		currentFrame_1 = 1;
+		menuDisappearComplete_1 = true;
+		openMenuAnimation_1();
+	}
+}
+
+///Cross Appear
+function arrowAppearAnimation_1() {
+	currentFrame_1++;
+	if ( currentFrame_1 <= arrowAppearDurationInFrames_1 ) {
+		window.requestAnimationFrame( ()=> { 
+			//top line
+			topLeftX_1 = AJS.easeOutBack( 30, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+			topLeftY_1 = AJS.easeOutBack( 50, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+			bottomRightX_1 = AJS.easeOutBack( 70, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+			bottomRightY_1 = AJS.easeOutBack( 50, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+			topLine_1.setAttribute( "d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1 );
+			//bottom line
+			bottomLeftX_1 = AJS.easeOutBack( 30, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+			bottomLeftY_1 = AJS.easeOutBack( 50, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+			topRightX_1 = AJS.easeOutBack( 70, 65, arrowAppearDurationInFrames_1, currentFrame_1 );
+			topRightY_1 = AJS.easeOutBack( 50, 35, arrowAppearDurationInFrames_1, currentFrame_1 );
+			bottomLine_1.setAttribute( "d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1 );
+			//recursion
+			arrowAppearAnimation_1();
+		});
+	} else {
+		currentFrame_1 = 1;
+		arrowAppearComplete_1 = true;
+		openMenuAnimation_1();
+	}
+}
+
+///Combined Open Menu Animation
+function openMenuAnimation_1() {
+	if ( !menuDisappearComplete_1 ) { 
+		menuDisappearAnimation_1();
+	} else if ( !arrowAppearComplete_1) {
+		arrowAppearAnimation_1();
+	}
+}
+
+///Cross Disappear
+function arrowDisappearAnimation_1() {
+	currentFrame_1++;
+	if ( currentFrame_1 <= arrowDisappearDurationInFrames_1 ) {
+		window.requestAnimationFrame( ()=> {
+			//top line
+			topLeftX_1 = AJS.easeInBack( 35, 30, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			topLeftY_1 = AJS.easeInBack( 35, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			bottomRightX_1 = AJS.easeInBack( 65, 70, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			bottomRightY_1 = AJS.easeInBack( 65, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			topLine_1.setAttribute( "d", "M" + topLeftX_1 + "," + topLeftY_1 + " L" + bottomRightX_1 + "," + bottomRightY_1 );
+			//bottom line
+			bottomLeftX_1 = AJS.easeInBack( 35, 30, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			bottomLeftY_1 = AJS.easeInBack( 65, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			topRightX_1 = AJS.easeInBack( 65, 70, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			topRightY_1 = AJS.easeInBack( 35, 50, arrowDisappearDurationInFrames_1, currentFrame_1 );
+			bottomLine_1.setAttribute( "d", "M" + bottomLeftX_1 + "," + bottomLeftY_1 + " L" + topRightX_1 + "," + topRightY_1 );
+			//recursion
+			arrowDisappearAnimation_1();
+		});
+	} else {
+		middleLine_1.style.opacity = "1";
+		currentFrame_1 = 1;
+		arrowDisappearComplete_1 = true;
+		closeMenuAnimation_1();
+	}
+}
+
+///Menu Appear
+function menuAppearAnimation_1() {
+	currentFrame_1++;
+	if ( currentFrame_1 <= menuAppearDurationInFrames_1 ) {
+		window.requestAnimationFrame( ()=> {
+			//top line
+			topLineY_1 = AJS.easeOutBack( 50, 37, menuDisappearDurationInFrames_1, currentFrame_1 );
+			topLine_1.setAttribute( "d", "M30,"+topLineY_1+" L70,"+topLineY_1 );
+			//bottom line
+			bottomLineY_1 = AJS.easeOutBack( 50, 63, menuDisappearDurationInFrames_1, currentFrame_1 );
+			bottomLine_1.setAttribute( "d", "M30,"+bottomLineY_1+" L70,"+bottomLineY_1 );
+			//recursion
+			menuAppearAnimation_1();
+		});
+	} else {
+		currentFrame_1 = 1;
+		menuAppearComplete_1 = true;
+		closeMenuAnimation_1();
+	}
+}
+
+///Close Menu Animation
+function closeMenuAnimation_1() {
+	if ( !arrowDisappearComplete_1 ) {
+		arrowDisappearAnimation_1();
+	} else if ( !menuAppearComplete_1 ) {
+		menuAppearAnimation_1();
+	}
+}
+
+///Events
+icon_1.addEventListener( "click", ()=> { 
+  if ( state_1 === "menu" ) {
+  	openMenuAnimation_1();
+  	state_1 = "arrow";
+  	arrowDisappearComplete_1 = false;
+		menuAppearComplete_1 = false;
+  } else if ( state_1 === "arrow" ) {
+  	closeMenuAnimation_1();
+  	state_1 = "menu";
+  	menuDisappearComplete_1 = false;
+		arrowAppearComplete_1 = false;
+  }
+});
+
+
+// Cursor
+document.addEventListener("DOMContentLoaded", function(event) {
+  var cursor = document.querySelector(".custom-cursor");
+  var links = document.querySelectorAll("a, button, #nav-btn, input.btn");
+
+  var initCursor = false;
+
+  for (var i = 0; i < links.length; i++) {
+    var selfLink = links[i];
+
+    selfLink.addEventListener("mouseover", function() {
+      cursor.classList.add("custom-cursor--link");
+    });
+    selfLink.addEventListener("mouseout", function() {
+      cursor.classList.remove("custom-cursor--link");
+    });
+  }
+
+
+  window.onmousemove = function(e) {
+    var mouseX = e.clientX;
+    var mouseY = e.clientY;
+
+    if (!initCursor) {
+      // cursor.style.opacity = 1;
+      TweenLite.to(cursor, 0.5, {
+        opacity: 1
+      });
+      initCursor = true;
+    }
+
+    TweenLite.to(cursor, 0, {
+      top: mouseY + "px",
+      left: mouseX + "px"
+    });
+  };
+  
+  window.ontouchmove = function(e) {
+    var mouseX = e.touches[0].clientX;
+    var mouseY = e.touches[0].clientY;
+    if (!initCursor) {
+      // cursor.style.opacity = 1;
+      TweenLite.to(cursor, 0.3, {
+        opacity: 1
+      });
+      initCursor = true;
+    }
+
+    TweenLite.to(cursor, 0, {
+      top: mouseY + "px",
+      left: mouseX + "px"
+    });
+  };
+
+  window.onmouseout = function(e) {
+    TweenLite.to(cursor, 0.3, {
+      opacity: 0
+    });
+    initCursor = false;
+  };
+
+  window.ontouchstart = function(e) {
+    TweenLite.to(cursor, 0.3, {
+      opacity: 1
+    });
+  };
+  
+  window.ontouchend = function(e) {
+    setTimeout( function() {
+      TweenLite.to(cursor, 0.3, {
+        opacity: 0
+      });
+    }, 200);   
+  };
+  
+});
