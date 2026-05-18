@@ -29,7 +29,7 @@ const ContactSection = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const contactInfo = {
-    email: 'contact@skylineways.site',
+    email: 'contact@aakshiv.com',
     phone: '+91 9408342183',
     location: 'Ahmedabad, India',
   };
@@ -129,7 +129,7 @@ const ContactSection = () => {
 
               <div className="relative z-10 border-b border-white/10 px-5 py-4 sm:px-7">
                 <div className="grid grid-cols-2 gap-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/50 sm:grid-cols-[1.1fr_1fr_1fr_1fr_80px]">
-                  <div>SkylineWays</div>
+                  <div>आक्षिव</div>
                   <div className="hidden sm:block">About</div>
                   <div className="hidden sm:block">Contact</div>
                   <div className="hidden sm:block">Projects</div>

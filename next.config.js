@@ -58,11 +58,11 @@ const nextConfig = {
   env: {
     SITE_URL:
       process.env.NODE_ENV === 'production'
-        ? 'https://skylineways.site'
+        ? 'https://portfolio.aakshiv.com'
         : 'http://localhost:3000',
     SITE_NAME: 'Skyline Ways - Freelance AI/ML Developer',
     SITE_DESCRIPTION:
-      'Professional AI/ML development services by SkylineWays. Specializing in machine learning, data science, and Python development for businesses worldwide.',
+      'Professional AI/ML development services by Aakshiv. Specializing in machine learning, data science, and Python development for businesses worldwide.',
   },
 
   // Performance optimizations

@@ -54,28 +54,28 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://pawarjay',
     siteName: 'Skyline Ways',
-    title: 'SkylineWays - Professional AI/ML Development Services',
+    title: 'Aakshiv - Professional AI/ML Development Services',
     description:
       'Professional freelance AI/ML developer and data scientist. Transform your business with cutting-edge AI solutions, machine learning models, and data analytics.',
     images: [
       {
-        url: 'https://skylineways.site/og-image.jpg',
+        url: 'https://portfolio.aakshiv.com/',
         width: 1200,
         height: 630,
-        alt: 'Skyline Ways - Freelance AI/ML Developer',
+        alt: 'Aakshic - Freelance Full Stack AI/ML Developer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SkylineWays - Professional AI/ML Development Services',
+    title: 'Aakshiv - Professional Full Stack AI/ML Development Services',
     description:
       'Professional freelance AI/ML developer and data scientist. Transform your business with cutting-edge AI solutions.',
-    images: ['https://skylineways.site/twitter-image.jpg'],
-    creator: '@skylineways',
+    images: ['https://aakshiv.com/twitter-image.jpg'],
+    creator: '@aakshiv',
   },
   alternates: {
-    canonical: 'https://skylineways.site',
+    canonical: 'https://portfolio.aakshiv.com/',
   },
   category: 'technology',
   classification: 'Business',
@@ -85,7 +85,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://skylineways.site'),
+  metadataBase: new URL('https://portfolio.aakshiv.com/'),
   verification: {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',

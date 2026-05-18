@@ -140,7 +140,7 @@ export default function Footer() {
               <div className='flex items-start gap-3'>
                 <EnvelopeIcon className='mt-0.5 h-4 w-4 text-[#f59e0b]' />
                 <a
-                  href='mailto:contact@skylineways.site'
+                  href='mailto:contact@aakshiv.com'
                   className='hover:text-white'
                 >
                   contact@aakshiv.com
@@ -209,7 +209,7 @@ export default function Footer() {
         <div className='border-t border-white/8 px-6 py-5 sm:px-8 lg:px-10'>
           <div className='flex flex-col gap-4 text-sm text-white/42 sm:flex-row sm:items-center sm:justify-between'>
             <p>
-              © {new Date().getFullYear()} SkylineWays. All rights reserved.
+              © {new Date().getFullYear()} Aakshiv. All rights reserved.
             </p>
             <button
               onClick={scrollToTop}

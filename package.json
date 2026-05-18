@@ -1,12 +1,12 @@
 {
-  "name": "skylineways-portfolio",
+  "name": "aakshiv-portfolio",
   "version": "1.0.0",
   "description": "Professional freelance AI/ML developer portfolio and services website for Skyline Ways",
-  "author": "SkylineWays <contact@skylineways.site>",
-  "homepage": "https://skylineways.site",
+  "author": "aakshiv <contact@aakshiv.com>",
+  "homepage": "https://portfolio.aakshiv.com/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pawarJai/skylineways-portfolio"
+    "url": "https://portfolio.aakshiv.com/"
   },
   "keywords": [
     "freelance",
@@ -17,7 +17,7 @@
     "python",
     "developer",
     "portfolio",
-    "skylineways"
+    "aakshiv"
   ],
   "private": true,
   "scripts": {
