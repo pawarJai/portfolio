@@ -7,48 +7,68 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 const projects = [
   {
     number: '01',
-    title: 'Brand Identity & Strategy',
-    type: 'AI Product Platform',
+    title: 'QUEST Control Flows',
+    type: 'Corporate Website & ERP',
     description:
-      'Startup onboarding platform with fundraising, activation workflows, and a scalable full-stack system.',
-    stack: 'FastAPI, Next.js, React, AWS',
-    meta: 'BizDateUp · 2024 - 2025',
+      'Led development of corporate website and integrated ERP system for QUEST Control Flows, showcasing portfolio for Fortune 500 clients (Indian Navy, OIL, ONGC) and managing internal enterprise resources.',
+    stack: 'FastAPI, React, Next.js, PostgreSQL, AWS',
+    meta: 'OneConnectX · Nov 2025 - Present',
     accent: 'dark',
   },
   {
     number: '02',
-    title: 'UI/UX Design & Digital Experiences',
-    type: 'Monitoring System',
+    title: 'NGHR - Recruitment Platform',
+    type: 'Job Portal & Real-time Chat',
     description:
-      "Manufacturing visibility dashboards for Dr Reddy's with operational analytics and live production insight.",
-    stack: 'Python, Django, React, PostgreSQL',
-    meta: "Plant Visibility · Dr Reddy's",
+      'Comprehensive recruitment platform connecting job seekers, companies, and consultants with CV building, real-time chat, and tiered subscription access (free/paid).',
+    stack: 'Next.js, FastAPI, MongoDB',
+    meta: 'OneConnectX · Mar 2025 - Aug 2025',
     accent: 'dark',
   },
   {
     number: '03',
-    title: 'Fast Integration',
-    type: 'Planning & Logistics',
+    title: 'BizDateUp',
+    type: 'Startup Onboarding Platform',
     description:
-      'Dispatch and workforce planning platform with delivery logic, inventory workflows, and cloud deployment.',
-    stack: 'Flask, Spark, Next.js, AWS',
-    meta: 'Dispatch Planning System',
+      'Startup onboarding platform with integrated fundraising, payment processing, and activation workflows. Led team of 7 developers through complete development lifecycle with CI/CD integration.',
+    stack: 'FastAPI, Django, ReactJS, NextJS, AWS, Docker',
+    meta: 'Script All DNA · Mar 2024 - Mar 2025',
     accent: 'light',
   },
   {
     number: '04',
-    title: 'Backend Product Systems',
-    type: 'Society Management',
+    title: 'Plant Visibility System',
+    type: 'Manufacturing Analytics',
     description:
-      'Booking, payment, notification, and admin workflows designed for real business operations and smoother management.',
-    stack: 'Django, PostgreSQL, REST API',
-    meta: 'Entrns Platform',
+      'Real-time manufacturing plant monitoring and analytics dashboard for Dr Reddy\'s with KPI dashboards, role-based access control, and production insight visualization.',
+    stack: 'Django, React, PostgreSQL, REST API',
+    meta: "Dr Reddy's · Aug 2022 - Feb 2024",
+    accent: 'light',
+  },
+  {
+    number: '05',
+    title: 'Purecane',
+    type: 'Product Management System',
+    description:
+      'Comprehensive product management system with sales dashboards, expense tracking, profit analysis, shop management, and logistics coordination.',
+    stack: 'React Vite, MongoDB, Flask',
+    meta: 'OneConnectX · Sep 2025 - Jan 2026',
+    accent: 'dark',
+  },
+  {
+    number: '06',
+    title: 'Crex - Live Cricket Score',
+    type: 'Live Sports Analytics',
+    description:
+      'Live cricket score application delivering real-time match updates, statistics, and mobile-responsive UI for optimal user engagement.',
+    stack: 'Next.js, React Vite, MongoDB, Node.js',
+    meta: 'OneConnectX · Apr 2025 - Jul 2025',
     accent: 'light',
   },
 ];
 
 export default function ProjectsSection() {
-  const [activeProject, setActiveProject] = useState(3);
+  const [activeProject, setActiveProject] = useState(0);
 
   return (
     <section id="projects" className="bg-[#141414] px-4 py-20 text-white sm:px-6 lg:px-8 lg:py-28">
@@ -100,9 +120,7 @@ export default function ProjectsSection() {
                     Featured Projects
                   </h2>
                   <p className="mt-4 max-w-2xl text-base leading-8 text-white/58 md:text-lg">
-                    Selected product and engineering work spanning AI systems,
-                    full-stack delivery, internal tooling, and operational
-                    platforms.
+                    Production-grade applications spanning recruitment platforms, manufacturing analytics, startup infrastructure, and real-time systems. Built for Fortune 500 clients and innovative startups.
                   </p>
                 </div>
 
