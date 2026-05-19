@@ -189,7 +189,7 @@ export default function HeroSection() {
           >
             Jayesh Pawar
             <br />
-            <span style={{ color: '#f59e0b' }}>AI / ML</span> Developer
+            <span style={{ color: '#f59e0b' }}>Full Stack AI / ML</span> Developer
           </motion.h1>
 
           {/* Sub tagline */}

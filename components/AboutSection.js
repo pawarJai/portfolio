@@ -5,40 +5,40 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Custom AI Strategy and Messaging',
+    title: 'Full-Stack Python & AI Development',
     description:
-      'Define your AI roadmap, messaging system, and product direction with a clear strategy that supports real delivery.',
-    items: ['AI roadmap', 'Messaging architecture', 'Technical planning'],
+      'Build production-ready AI systems, data pipelines, and scalable backend services using Django, FastAPI, and machine learning libraries.',
+    items: ['Django', 'FastAPI', 'Machine Learning', 'Data Pipelines'],
   },
   {
-    title: 'Machine Learning Product Design',
+    title: 'MERN Stack & Modern Web Development',
     description:
-      'Shape ML products that feel simple for users while keeping the underlying system practical, scalable, and measurable.',
-    items: ['User flows', 'Prediction UX', 'Model-to-product alignment'],
+      'Create responsive, high-performance web applications with React, Next.js, and Node.js for seamless user experiences.',
+    items: ['React', 'Next.js', 'NodeJS', 'Full-Stack Development'],
   },
   {
-    title: 'LLM Workflows and Automation Systems',
+    title: 'Data Analysis & Visualization',
     description:
-      'Build powerful automation pipelines using LLMs, retrieval systems, prompt orchestration, and process design.',
-    items: ['Prompt systems', 'Agent workflows', 'Business automation'],
+      'Transform raw data into actionable insights using Pandas, NumPy, and create executive-ready dashboards for decision-making.',
+    items: ['Pandas', 'NumPy', 'Data Visualization', 'Analytics'],
   },
   {
-    title: 'Data Visualization and Decision Dashboards',
+    title: 'Cloud & DevOps Architecture',
     description:
-      'Turn raw data into executive-ready dashboards and product interfaces that help teams make faster decisions.',
-    items: ['Dashboard design', 'Analytics UX', 'Insight presentation'],
+      'Deploy scalable applications on AWS, containerize with Docker, and implement CI/CD pipelines for reliable production systems.',
+    items: ['AWS', 'Docker', 'CI/CD', 'Infrastructure'],
   },
   {
-    title: 'Brand Systems for Technical Products',
+    title: 'Database Design & Optimization',
     description:
-      'Create a strong visual language for AI products so the brand feels polished, modern, and trustworthy.',
-    items: ['Visual identity', 'UI direction', 'Design consistency'],
+      'Design efficient database schemas with PostgreSQL and MongoDB, optimize queries, and manage complex data relationships.',
+    items: ['PostgreSQL', 'MongoDB', 'Query Optimization', 'Data Modeling'],
   },
   {
-    title: 'Motion Design for Product Storytelling',
+    title: 'Team Leadership & Product Strategy',
     description:
-      'Use subtle motion and interaction to explain complex systems with clarity and create a more premium experience.',
-    items: ['Micro-interactions', 'Motion systems', 'Launch storytelling'],
+      'Lead development teams, drive product roadmaps, and deliver enterprise solutions for Fortune 500 companies and startups.',
+    items: ['Team Management', 'Product Strategy', 'Stakeholder Communication', 'Delivery'],
   },
 ];
 
@@ -89,12 +89,10 @@ const AboutSection = () => {
                 01
               </div>
               <h2 className="text-4xl font-black leading-tight text-[#ece8e1] md:text-5xl">
-                AI/ML Services
+                Expertise & Services
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-8 text-white/58 md:text-lg">
-                I design and build AI-first product systems with a clear visual
-                language, thoughtful strategy, and production-ready execution for
-                modern brands and technical teams.
+                Full-stack Python developer and AI/ML specialist with 5.5+ years of experience building production-ready systems, scalable APIs, and intelligent data solutions. I deliver enterprise-grade applications for Fortune 500 companies and innovative startups worldwide.
               </p>
             </div>
 
@@ -161,21 +159,21 @@ const AboutSection = () => {
 
             <div className="mt-10 flex flex-wrap gap-8 border-t border-white/8 pt-8">
               <div>
-                <div className="text-3xl font-black text-[#ece8e1]">5+</div>
+                <div className="text-3xl font-black text-[#ece8e1]">5.5+</div>
                 <div className="mt-1 text-sm uppercase tracking-[0.18em] text-white/42">
                   Years Experience
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-black text-[#ece8e1]">20+</div>
+                <div className="text-3xl font-black text-[#ece8e1]">25+</div>
                 <div className="mt-1 text-sm uppercase tracking-[0.18em] text-white/42">
-                  Technologies
+                  Tech Stack Skills
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-black text-[#ece8e1]">10+</div>
+                <div className="text-3xl font-black text-[#ece8e1]">15+</div>
                 <div className="mt-1 text-sm uppercase tracking-[0.18em] text-white/42">
-                  Projects Completed
+                  Enterprise Projects
                 </div>
               </div>
             </div>
