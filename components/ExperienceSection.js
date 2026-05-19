@@ -7,29 +7,38 @@ const workExperience = [
   {
     label: 'Step-01',
     number: '1',
-    title: 'Plan',
-    meta: 'Script All DNA Technology · Jul 2022 - Mar 2025',
+    title: 'Lead & Build',
+    meta: 'OneConnectX · Mar 2025 - Present',
     description:
-      "Designed and shipped full-stack systems for manufacturing visibility, onboarding, and real-time tracking across production workflows.",
-    stack: 'Python, Django, React, PostgreSQL, AWS',
+      'Lead full-stack development initiatives and team coordination for enterprise solutions. Architect scalable systems and mentor junior developers while delivering production-grade applications.',
+    stack: 'Python, Django, FastAPI, React, Next.js, PostgreSQL, AWS',
   },
   {
     label: 'Step-02',
     number: '2',
-    title: 'Automate',
-    meta: 'Ijona · Mar 2021 - May 2022',
+    title: 'Scale & Deliver',
+    meta: 'Script All DNA Technology · Jul 2022 - Mar 2025',
     description:
-      'Built backend APIs, booking and payment logic, and internal automation tools that simplified society management workflows.',
-    stack: 'Python, Django, Flask, REST API, PostgreSQL',
+      "Designed and shipped full-stack Python & AI systems for manufacturing workflows. Built scalable backend APIs, integrated ML models, and delivered real-time data pipelines for Fortune 500 clients.",
+    stack: 'Python, Django, FastAPI, React, PostgreSQL, MongoDB, AWS, ML',
   },
   {
     label: 'Step-03',
     number: '3',
-    title: 'Execute',
+    title: 'Automate & Optimize',
+    meta: 'Ijona · Mar 2021 - May 2022',
+    description:
+      'Built robust backend APIs, payment processing logic, and automation tools for society management. Optimized database queries and implemented caching strategies for high-traffic systems.',
+    stack: 'Python, Django, Flask, REST API, PostgreSQL, Redis',
+  },
+  {
+    label: 'Step-04',
+    number: '4',
+    title: 'Build Interfaces',
     meta: '3iwebexpert · Jan 2020 - Feb 2021',
     description:
-      'Created e-commerce interfaces, handled frontend delivery, and supported data-processing workflows for product and customer systems.',
-    stack: 'JavaScript, HTML/CSS, Python, UI Delivery',
+      'Created responsive e-commerce interfaces and frontend delivery. Collaborated with backend teams on data-processing workflows and improved user experience across product systems.',
+    stack: 'JavaScript, React, HTML/CSS, UI/UX, Python',
   },
 ];
 
@@ -119,8 +128,7 @@ const ExperienceSection = () => {
                   Professional Journey
                 </h2>
                 <p className="mt-4 max-w-2xl text-base leading-8 text-white/58 md:text-lg">
-                  A switchable view of how I plan, automate, and execute modern
-                  digital systems across product, backend, and AI delivery.
+                  A comprehensive overview of my professional growth from frontend development to full-stack leadership. Currently leading initiatives at OneConnectX while delivering enterprise-scale AI and data solutions.
                 </p>
               </div>
 
@@ -150,7 +158,7 @@ const ExperienceSection = () => {
               </div>
             </div>
 
-            <div className="grid gap-8 lg:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {activeCards.map((card, index) => (
                 <motion.div
                   key={`${activeTab}-${card.title}`}
