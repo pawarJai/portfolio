@@ -15,11 +15,11 @@ const navigation = [
 const cvLinks = [
   {
     label: 'Download PDF',
-    href: 'https://global-asset-hub.s3.ap-south-1.amazonaws.com/Jayesh_Pawar-01.pdf',
+    href: 'https://global-asset-hub.s3.ap-south-1.amazonaws.com/docs/Jayesh_Pawar-01.pdf',
   },
   {
     label: 'Download DOCX',
-    href: 'https://global-asset-hub.s3.ap-south-1.amazonaws.com/Jayesh_Pawar-01.docx',
+    href: 'https://global-asset-hub.s3.ap-south-1.amazonaws.com/docs/Jayesh_Pawar-01.docx',
   },
 ];
 

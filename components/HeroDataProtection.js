@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Linkedin, Twitter, Instagram } from 'lucide-react';
 
 export default function HeroSection() {
   const cursorRef = useRef(null);
@@ -274,26 +274,27 @@ export default function HeroSection() {
             }}
           >
             {[
-              { href: 'https://www.linkedin.com/in/pawarjay/', label: 'linkedin' },
-              { href: 'https://www.instagram.com/pawarjay468/',      label: 'twitter' },
-              { href: 'https://x.com/pawarjay1516',label: 'instagram' },
-            ].map(({ href, label }) => (
+              { href: 'https://www.linkedin.com/in/pawarjay/', label: 'linkedin', Icon: Linkedin },
+              { href: 'https://www.instagram.com/pawarjay468/', label: 'instagram', Icon: Instagram },
+              { href: 'https://x.com/pawarjay1516', label: 'twitter', Icon: Twitter },
+            ].map(({ href, label, Icon }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
+                title={label}
                 style={{
                   color: 'rgba(255,255,255,0.38)',
-                  fontSize: 'clamp(0.65rem, 1.5vw, 0.78rem)',
-                  fontWeight: 700,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  textDecoration: 'none',
-                  transition: 'color 0.3s',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'color 0.3s, transform 0.3s',
                 }}
+                onMouseEnter={(e) => (e.target.style.color = 'rgba(255,255,255,0.8)', e.target.style.transform = 'scale(1.15)')}
+                onMouseLeave={(e) => (e.target.style.color = 'rgba(255,255,255,0.38)', e.target.style.transform = 'scale(1)')}
               >
-                {label}
+                <Icon size={20} />
               </a>
             ))}
           </motion.div>
